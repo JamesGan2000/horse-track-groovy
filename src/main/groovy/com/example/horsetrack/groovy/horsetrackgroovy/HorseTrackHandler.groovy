@@ -11,7 +11,7 @@ class HorseTrackHandler {
     String handle(String param1, String param2){
         CommandInfo commandInfo = commandParser.parse(param1, param2);
         if(!commandInfo.valid){
-            return commandInfo.message;
+            commandInfo.message;
         }else if(commandInfo.quit){
             commandInfo.message = "QUIT";
         }else {
@@ -52,7 +52,7 @@ class HorseTrackHandler {
             }
         }
 
-        return commandInfo.message;
+        commandInfo.message;
     }
 
 }

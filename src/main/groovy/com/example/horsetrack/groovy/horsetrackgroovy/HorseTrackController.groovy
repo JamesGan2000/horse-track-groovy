@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 class HorseTrackController {
-    private HorseTrackHandler horseTrackHandler = new HorseTrackHandler();
+    HorseTrackHandler horseTrackHandler = new HorseTrackHandler();
 
     @GetMapping("/start")
     @ResponseBody
     String start(){
-        return HorseTrackViewHelper.displayInitialInventory() + "<br/>" +
+        HorseTrackViewHelper.displayInitialInventory() + "<br/>" +
                 HorseTrackViewHelper.displayInitialHorseInfo();
     }
 
     @GetMapping("/play/{param1}/{param2}")
     @ResponseBody
     String play(@PathVariable("param1") String param1, @PathVariable("param2") String param2) {
-        return horseTrackHandler.handle(param1, param2);
+        horseTrackHandler.handle(param1, param2);
     }
 }

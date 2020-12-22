@@ -37,6 +37,6 @@ class CommandParser {
             commandInfo.valid = false;
             commandInfo.message = "Invalid Command:" + param1 + " " + param2;
         }
-        return commandInfo;
+        commandInfo;
     };
 }

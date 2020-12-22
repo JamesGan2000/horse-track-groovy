@@ -10,16 +10,12 @@ class InventoryItem {
     }
 
     Integer value(){
-        return dollar * count;
-    }
-
-    Integer plus(InventoryItem item){
-        value() + item.value()
+        dollar * count;
     }
 
     @Override
     public String toString() {
-        return '$' + dollar + ", " + count;
+        '$' + dollar + ", " + count;
     }
     
 }

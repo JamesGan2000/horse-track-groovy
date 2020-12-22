@@ -10,7 +10,7 @@ class HorseTrackInitalizer {
         horseInfos.add(new HorseOdd(5, "Real Princess", 3, false));
         horseInfos.add(new HorseOdd(6, "Pa Kettle", 5, false));
         horseInfos.add(new HorseOdd(7, "Gin Stinger", 6, false));
-        return horseInfos;
+        horseInfos;
     }
 
     static List<InventoryItem> initialInventory(){
@@ -21,6 +21,6 @@ class HorseTrackInitalizer {
         balances.add(new InventoryItem(20, 10));
         balances.add(new InventoryItem(100, 10));
 
-        return balances;
+        balances;
     }
 }

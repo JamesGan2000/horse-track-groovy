@@ -15,7 +15,7 @@ class HorseOdd {
 
     @Override
     public String toString() {
-        return horseNumber + ", " + horseName + ", " + odds +
+        horseNumber + ", " + horseName + ", " + odds +
                 ", " + (win ? "won" : "lost");
     }
 }

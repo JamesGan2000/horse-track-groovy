@@ -17,7 +17,7 @@ class HorseTrackHelper {
                 betResult.winningAmount = betResult.matchingHorse.odds * betAmount;
             }
         }
-        return betResult;
+        betResult;
     }
 
     static void resetWinningHorse(Integer horseNumber){
@@ -29,10 +29,10 @@ class HorseTrackHelper {
     static HorseOdd findByHorseNumber(Integer horseNumber){
         for (HorseOdd horseInfo : horseInfos) {
             if(horseInfo.horseNumber.equals(horseNumber)){
-                return horseInfo;
+                horseInfo;
             }
         }
-        return null;
+        null;
     }
 
     static List<InventoryItem> cashOut(Integer payAmount){
@@ -42,7 +42,7 @@ class HorseTrackHelper {
 
         for (int i = balances.size() - 1; i >= 0; i--) {
             if(remainingPayoutAmount < 1){
-                return payoutInfo;
+                payoutInfo;
             }
 
             InventoryItem s = balances.get(i);
@@ -58,10 +58,10 @@ class HorseTrackHelper {
             payoutInfo.add(new InventoryItem(s.dollar, min));
         }
 
-        return payoutInfo;
+        payoutInfo;
     }
 
     static Integer cashBalance(){
-        balances.sum {it.value()} as Integer
+        balances.sum { InventoryItem it -> it.value()} as Integer
     }
 }
